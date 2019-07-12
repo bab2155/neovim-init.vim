@@ -103,7 +103,8 @@ let g:airline_section_warning = ''
 tmap <Esc> <C-\><C-n>
 tmap <C-w> <Esc><C-w>
 "tmap <C-d> <Esc>:q<CR>
-autocmd BufWinEnter,WinEnter term://* startinsert
+"autocmd BufWinEnter,WinEnter term://* startinsert
+autocmd BufWinEnter,WinEnter term://* stopinsert
 autocmd BufLeave term://* stopinsert
 
 " Deoplete
