@@ -48,6 +48,9 @@ Plug 'honza/vim-snippets'
 Plug 'metakirby5/codi.vim'
 Plug 'dkarter/bullets.vim'
 
+" Ben
+Plug 'rhysd/accelerated-jk'
+
 " Entertainment
 "Plug 'ryanss/vim-hackernews'
 
@@ -231,6 +234,12 @@ xmap <leader>l :Limelight!!<CR>
 autocmd FileType python nmap <leader>x :0,$!~/.config/nvim/env/bin/python -m yapf<CR>
 "nmap <leader>n :HackerNews best<CR>J
 nmap <silent> <leader><leader> :noh<CR>
-nmap <Tab> :bnext<CR>
-nmap <S-Tab> :bprevious<CR>
+"nmap <Tab> :bnext<CR>
+"nmap <S-Tab> :bprevious<CR>
+nmap <leader><Tab> :bnext<CR>
+nmap <leader><S-Tab> :bprevious<CR>
 
+nmap j <Plug>(accelerated_jk_gj)
+nmap k <Plug>(accelerated_jk_gk)
+
+nmap <leader>z <C-w>w
