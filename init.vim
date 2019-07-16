@@ -62,6 +62,9 @@ let g:python3_host_prog = expand('~/.config/nvim/env/bin/python')
 """ Coloring
 syntax on
 color dracula
+"color forgotten-dark
+"color seoul256 
+"color Tomorrow-Night
 highlight Pmenu guibg=white guifg=black gui=bold
 highlight Comment gui=bold
 highlight Normal gui=none
@@ -103,7 +106,8 @@ let g:airline_section_warning = ''
 tmap <Esc> <C-\><C-n>
 tmap <C-w> <Esc><C-w>
 "tmap <C-d> <Esc>:q<CR>
-autocmd BufWinEnter,WinEnter term://* startinsert
+"autocmd BufWinEnter,WinEnter term://* startinsert
+autocmd BufWinEnter,WinEnter term://* stopinsert
 autocmd BufLeave term://* stopinsert
 
 " Deoplete
@@ -221,8 +225,10 @@ nmap <leader>r :so ~/.config/nvim/init.vim<CR>
 nmap <leader>t :call TrimWhitespace()<CR>
 xmap <leader>a gaip*
 nmap <leader>a gaip*
-nmap <leader>s <C-w>s<C-w>j:terminal<CR>
-nmap <leader>vs <C-w>v<C-w>l:terminal<CR>
+"nmap <leader>s <C-w>s<C-w>j:terminal<CR>
+"nmap <leader>vs <C-w>v<C-w>l:terminal<CR>
+nmap <leader>s <C-w>s<C-w>j<CR>
+nmap <leader>vs <C-w>v<C-w>l<CR>
 nmap <leader>d <Plug>(pydocstring)
 nmap <leader>f :Files<CR>
 nmap <leader>g :Goyo<CR>
@@ -242,4 +248,16 @@ nmap <leader><S-Tab> :bprevious<CR>
 nmap j <Plug>(accelerated_jk_gj)
 nmap k <Plug>(accelerated_jk_gk)
 
-nmap <leader>z <C-w>w
+nmap <leader>zz <C-w>w
+nmap <leader>zc <C-w>c
+nmap <leader>zo <C-w>o
+nmap <leader>zr <C-w>r
+nmap <leader>z= <C-w>=
+
+nmap <A-l> <C-w>l
+nmap <A-j> <C-w>j
+nmap <A-k> <C-w>k
+nmap <A-h> <C-w>h
+
+nmap <A-u> :res +2<CR>
+nmap <A-i> :res -2<CR>
